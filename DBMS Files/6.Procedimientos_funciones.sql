@@ -99,7 +99,7 @@ BEGIN
     END;
 
     -- Verifica si el incidente ya existe
-    v_incidente_existente := obtener_id_incidente(descripcion_incidente);
+    v_incidente_existente := id_incidente(descripcion_incidente);
 
     IF v_incidente_existente IS NOT NULL THEN
         DBMS_OUTPUT.PUT_LINE('El incidente ya existe con ID: ' || v_incidente_existente);
